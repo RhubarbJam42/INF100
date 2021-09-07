@@ -1,0 +1,20 @@
+Oppgave 1.
+Instrukser for å få et romvesen til å åpne en dør
+
+1. Lokaliser et rektangulært objekt på en vegg. Objektet har også et håndtak
+2. Gå til objektet, også kalt "en dør," og ta tak i håndtaket
+3. Vri så håndtaket til høyre
+4. Trekk mot deg eller skyv fra deg døra
+5. Du har nå åpnet en dør
+
+
+a) Tror dette blir antallet instruksjoner jeg ville gitt et romvesen for å åpne en dør. (altså 5 instruksjoner)
+
+b) Antakelser som hva et håndtak er kan være for komplisert. Den burde gjenkjenne ord som "objekt" og beskrivelser
+   av det som følger etter instruksen. Posisjon til håndtak og eller andre ting kan gi feil. Det finnes så klart
+   flere forskjellige typer håndtak. Noen som ikke trenger å vris etc.
+
+   Dette sammenlignes veldig godt med oppgavene vi gir en datamaskin i et program. En datamaskin vil ikke kunne
+   gjenkjenne ting som vi vanligvis vil kunne gjenkjenne. Derfor lager vi variabler til ting som et program vil
+   forstå. For eksempel Eple = 'eple'. Vi vil da kunne skrive inn Eple i terminal og få ut en string 'eple'.
+   Dette vil være "forståelig" for en datamaskin etter det er definert.
