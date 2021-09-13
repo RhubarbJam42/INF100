@@ -10,4 +10,5 @@ while temperature < boiling:
     print(f'{time}s = {roundedTemperature}°C')
     time = time + 1
     temperature = temperature + tempIncrease
-print(f'{temperature}°C i {time} sekunder')
+print(f'{temperature}°C i {time - 1} sekunder')
+#time - 1 sekunder siden vi tar med fra 0 sekunder. Derfor 120 sekunder = 119 sekunder
