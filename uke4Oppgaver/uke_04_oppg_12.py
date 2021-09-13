@@ -2,6 +2,6 @@
 
 binaryNumber = input('Binært tall: ')
 number = 0
-for digit in binaryNumber:
-    number = number * 2 + int(digit)
+for digits in binaryNumber:
+    number = number * 2 + int(digits)
 print(f'{number}')
