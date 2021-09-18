@@ -1,7 +1,6 @@
 #programmet beregner hvor lang tid det tar en stein å nå bakken fra en gitt høydeposisjon
 startPosition = float(input('Stenen droppes fra høyde: '))
 time = float(0)
-gravityConstant = float(startPosition - 1.0 / 2.0 * 9.8 * time ** 2.0)
 position = (startPosition - 1.0 / 2.0 * 9.8 * time ** 2.0)
 landed = 0
 
