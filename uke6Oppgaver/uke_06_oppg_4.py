@@ -18,4 +18,5 @@ def render_histogram(values):
 
     return histogram
 
+#for test purposes
 #print(render_histogram([5, 4, 2, 7, 0, 3, 10]))
