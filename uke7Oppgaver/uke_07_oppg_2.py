@@ -14,6 +14,6 @@ def tuesday_weather(temperatures):
     return float(temperatures[1])
 
 #tester
-print(update_weather("16.1 14.1 13.3 15.0 13.0 13.2 12.9"))
+#print(update_weather("16.1 14.1 13.3 15.0 13.0 13.2 12.9"))
 #print(tuesday_weather("16.1 14.1 13.3 15.0 13.0 13.2 12.9"))
 #print(tuesday_weather((16.1, 14.1, 13.3, 15.0, 13.0, 13.2, 12.9)))
