@@ -2,7 +2,7 @@
 
 def update_weather(temperatures):
     # lager en ny liste som legger til float verdier i listen. Returnerer tuple av listen
-    list_of_temperatures = temperatures.split(' ')
+    list_of_temperatures = temperatures.split()
     updated_temperature = []
     for item in list_of_temperatures:
         updated_temperature.append(float(item))
