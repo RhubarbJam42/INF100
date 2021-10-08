@@ -1,11 +1,11 @@
-#plot funksjon som tar koordinater av form (x, y) og gir ut et plot
+# plot funksjon som tar koordinater av form (x, y) og gir ut et plot
 
 def render_plot(coordinates):
     plot = ''
-    
-    #multiple assignment
+
+    # multiple assignment
     x_coordinates, y_coordinates = zip(*coordinates)
-    
+
     max_x = max(x_coordinates)
     min_x = min(x_coordinates)
     max_y = max(y_coordinates)
@@ -13,7 +13,7 @@ def render_plot(coordinates):
 
     width = len(range(min_x, max_x))
 
-    #Topp og bunn av plottet
+    # Topp og bunn av plottet
     top_and_bottom = '#' * (width + 3)
 
     plot_points = ''
@@ -22,6 +22,10 @@ def render_plot(coordinates):
         for x in range(min_x, max_x + 1):
             if (x, y) in coordinates:
                 plot_points += '*'
+            elif x == min_x + 1:
+                plot_points += '|'
+            elif y == min_y + 1:
+                plot_points += '-'
             else:
                 plot_points += ' '
         plot_points += '#\n'
@@ -30,6 +34,5 @@ def render_plot(coordinates):
 
     return plot
 
-
-#test
-#print(render_plot([(2, 3), (-1, 2), (1, -1), (0, 1), (4, 4)]))
+# test
+# print(render_plot([(2, 3), (-1, 2), (1, -1), (0, 1), (4, 4)]))
