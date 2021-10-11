@@ -8,17 +8,17 @@ def pigify(word):
         pig_word = copy(word) + 'way'
     #dersom ordet ikke starter med vokal
     else:
-        pig_word = list(word)[give_index(word):] + list(word)[:give_index(word)]
+        pig_word = list(word)[first_vowel_index(word):] + list(word)[:first_vowel_index(word)]
         pig_word += 'ay'
     return ''.join(pig_word)
 
 
-def give_index(word):
+def first_vowel_index(word):
     vowels = ('a', 'e', 'i', 'o', 'u')
     for index, letter in enumerate(word):
         if letter in vowels:
             return index
-    return -1
+    return 0
 
 
 def pigify_sentence(sentence):
