@@ -33,4 +33,3 @@ def pigify_sentence(sentence):
 #test
 #print(pigify('oolong'))
 #print(pigify('floor'))
-#print(pigify_sentence('alice was beginning to get very tired'))
