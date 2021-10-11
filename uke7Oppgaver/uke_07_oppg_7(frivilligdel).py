@@ -35,4 +35,4 @@ def render_plot(coordinates):
     return plot
 
 # test
-# print(render_plot([(2, 3), (-1, 2), (1, -1), (0, 1), (4, 4)]))
+print(render_plot([(2, 3), (-1, 2), (1, -1), (0, 1), (4, 4)]))
