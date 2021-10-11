@@ -32,4 +32,3 @@ def pigify_sentence(sentence):
 
 #test
 #print(pigify('oolong'))
-#print(pigify('floor'))
