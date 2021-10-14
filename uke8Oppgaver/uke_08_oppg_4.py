@@ -36,6 +36,7 @@ def egyptian_method(factor_a, factor_b):
         b_list.append(c)
         c *= 2
 
+    #for at matten skal bli riktig må max-verdi i listen først i tillegg må den også bli markert med X
     a_max = max(a_list)
     reverse_a = copy(a_list)
     reverse_a.reverse()
