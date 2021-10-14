@@ -1,6 +1,7 @@
 # lage et program som etterligner gammel egyptisk multiplikasjon for positive heltall som kun fungerer med addisjon og
 # fordobling
 from copy import copy
+
 a = int(input('Factor A: '))
 b = int(input('Factor B: '))
 
@@ -24,6 +25,12 @@ def egyptian_method(factor_a, factor_b):
     while n < factor_a:
         a_list.append(n)
         n *= 2
+    #dersom factor_a/factor_b < 3
+    if n == 2 and factor_a != 1:
+        a_list.append(n)
+    elif n == 1:
+        a_list.append(n)
+
     # lager en liste som dobler b for hver gang og er på størrelse med a
     for i in range(len(a_list)):
         b_list.append(c)
