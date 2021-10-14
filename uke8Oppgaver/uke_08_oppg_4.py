@@ -5,19 +5,18 @@ a = int(input('Factor A: '))
 b = int(input('Factor B: '))
 
 
-def egyptian_method(a, b):
+def egyptian_method(factor_a, factor_b):
     a_list = []
     b_list = []
     x_list = []
     index_list = []
 
     #til loopen
-    c = copy(b)
-
+    c = copy(factor_b)
 
     # dobler 1 til tallet under maks og lager en liste
     n = 1
-    while n < a:
+    while n < factor_a:
         a_list.append(n)
         n *= 2
     # lager en liste som dobler b for hver gang og er på størrelse med a
@@ -60,7 +59,7 @@ def egyptian_method(a, b):
     output_add_a = ''
     for x in index_list:
         if x == max(index_list):
-            output_add_a += f'{a_list[x]} = {a}'
+            output_add_a += f'{a_list[x]} = {factor_a}'
         elif x == index_list[0]:
             output_add_a += f'{a_list[x]} + '
         else:
@@ -70,7 +69,7 @@ def egyptian_method(a, b):
     output_add_b = ''
     for y in index_list:
         if y == max(index_list):
-            output_add_b += f'{b_list[y]} = {a * b}'
+            output_add_b += f'{b_list[y]} = {factor_a * factor_b}'
         elif y == index_list[0]:
             output_add_b += f'{b_list[y]} + '
         else:
