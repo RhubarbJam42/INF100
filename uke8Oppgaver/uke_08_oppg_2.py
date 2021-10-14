@@ -43,15 +43,15 @@ def change_to_power(list_of_values):
     return value_change
 
 
-'''
-test
 
+#test
+'''
 x1_ls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 y1_ls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-y2_ls = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
+y2_ls = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
 
 print(sum(change_to_power(y2_ls)), sum(change_to_power(x1_ls)))
 print(mean_value([1, 4, 5]))
 print(change([1, 2, 3]))
-print(pearson_corr(x1_ls, y1_ls))
+print(pearson_corr(x1_ls, y2_ls))
 '''
