@@ -10,6 +10,11 @@ def egyptian_method(factor_a, factor_b):
     b_list = []
     x_list = []
     index_list = []
+    factors = tuple([factor_a, factor_b])
+
+    if factor_a > factor_b:
+        factor_b = copy(factors[0])
+        factor_a = copy(factors[1])
 
     #til loopen
     c = copy(factor_b)
@@ -25,15 +30,14 @@ def egyptian_method(factor_a, factor_b):
         c *= 2
 
     a_max = max(a_list)
-
     reverse_a = copy(a_list)
     reverse_a.reverse()
 
-    #markerer med de tallene som skal adderes
+    #markerer med de tallene som skal adderes med en X
     for number in reverse_a:
         if number == a_max:
             x_list.append('X')
-        elif a_max + number <= a:
+        elif a_max + number <= factor_a:
             x_list.append('X')
             a_max += number
         else:
