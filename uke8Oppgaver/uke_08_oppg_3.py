@@ -28,7 +28,7 @@ def meal_options(fridge, meals):
 
 
 # contents of my fridge, in a list
-my_fridge = ["tomato sauce", "mustard", "potatoes", "carrots", "chicken", "frozen fish"]
+my_fridge = ["tomato sauce", "mustard", "potatoes", "carrots", "chicken", "frozen fish", 'fish fingers', 'custard']
 
 # ingredients for all 4 meals in tuple
 meal_recipes = [
@@ -37,6 +37,7 @@ meal_recipes = [
     ("chicken_curry", ["chicken", "curry paste", "carrots", "potatoes", "rice"]),
     ("chicken_veg", ["chicken", "potatoes", "carrots"]),
     ("pasta", ["spaghetti", "tomato sauce"]),
+    ('fish_fingers_&_custard', ['fish fingers', 'custard']),
 ]
 
 #test
