@@ -8,9 +8,7 @@ b = int(input('Factor B: '))
 
 def egyptian_method(factor_a, factor_b):
     a_list = []
-    b_list = []
     x_list = []
-    index_list = []
     factors = tuple([factor_a, factor_b])
 
     if factor_a > factor_b:
@@ -31,12 +29,10 @@ def egyptian_method(factor_a, factor_b):
     elif n == 1:
         a_list.append(n)
 
-    # lager en liste som dobler b for hver gang og er på størrelse med a
-    for i in range(len(a_list)):
-        b_list.append(c)
-        c *= 2
+    # lager en liste som dobler b for hver gang og er på størrelse med a (c er for å holde b  som en konstant)
+    b_list = [c * (2**i) for i in range(len(a_list))]
 
-    #for at matten skal bli riktig må max-verdi i listen først i tillegg må den også bli markert med X
+    #for at matten skal bli riktig må max-verdi i listen være først i tillegg må den også bli markert med X
     a_max = max(a_list)
     reverse_a = copy(a_list)
     reverse_a.reverse()
@@ -53,9 +49,8 @@ def egyptian_method(factor_a, factor_b):
     x_list.reverse()
 
     #finner index til X som sier hvilke tall som skal adderes
-    for k, item in enumerate(x_list):
-        if item == 'X':
-            index_list.append(k)
+
+    index_list = [k for k, item in enumerate(x_list) if item == 'X']
 
     #til formatering
     line_split = '=' * 25
