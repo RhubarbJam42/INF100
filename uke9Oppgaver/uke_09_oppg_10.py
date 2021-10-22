@@ -1,7 +1,6 @@
 # Euler 17
 
-numbers_name = {
-    0: "zero",
+words = {
     1: "one",
     2: "two",
     3: "three",
@@ -36,22 +35,69 @@ numbers_name = {
 
 def number_name(number):
     name = ''
+    sn = str(number)
     if number == 1000:
-        name = "one" + numbers_name.get(1000)
+        name += f"one {words.get(number)}"
     elif number == 100:
-        name = "one" + numbers_name.get(100)
-    elif 100 < number < 200:
-        name = "one" + numbers_name.get(100) + "and"
-        number -= 100
-        if number in numbers_name:
-            name += numbers_name.get(number)
+        name += f"one {words.get(number)}"
+    elif number <= 20:
+        name += f'{words.get(number)}'
+    elif len(sn) == 3:
+        if sn[1:] == '00':
+            name += f'{words.get(int(sn[0]))} hundred'
+        elif sn[2] == '0':
+            name += f'{words.get(int(sn[0]))} hundred and {words.get(int(sn[1]) * 10)}'
+        elif int(sn[1:]) in words:
+            name += f'{words.get(int(sn[0]))} hundred and {words.get(int(sn[1:]))}'
+        else:
+            name += f'{words.get(int(sn[0]))} hundred and {words.get(int(sn[1]) * 10)}-{words.get(int(sn[2]))}'
+    elif len(sn) == 2:
+        if sn[1] == '0':
+            name += f'{words.get(int(sn[0]) * 10)}'
+        else:
+            name += f'{words.get(int(sn[0]) * 10)}{words.get(int(sn[1]))}'
+    return name
 
+#kopi fordi lazy
+def num_name(number):
+    name = ''
+    sn = str(number)
+    if number == 1000:
+        name += f"one{words.get(number)}"
+    elif number == 100:
+        name += f"one{words.get(number)}"
+    elif number <= 20:
+        name += f'{words.get(number)}'
+    elif len(sn) == 3:
+        if sn[1:] == '00':
+            name += f'{words.get(int(sn[0]))}hundred'
+        elif sn[2] == '0':
+            name += f'{words.get(int(sn[0]))}hundredand{words.get(int(sn[1]) * 10)}'
+        elif int(sn[1:]) in words:
+            name += f'{words.get(int(sn[0]))}hundredand{words.get(int(sn[1:]))}'
+        else:
+            name += f'{words.get(int(sn[0]))}hundredand{words.get(int(sn[1]) * 10)}{words.get(int(sn[2]))}'
+    elif len(sn) == 2:
+        if sn[1] == '0':
+            name += f'{words.get(int(sn[0]) * 10)}'
+        else:
+            name += f'{words.get(int(sn[0]) * 10)}{words.get(int(sn[1]))}'
     return name
 
 
-# def all_numbernames(N):
+def all_numbernames(number):
+    word = ''
+    for i in range(1, number+1):
+        word += num_name(i)
+    return len(word)
 
-# def solve_euler_17():
+
+def solve_euler_17():
+    return all_numbernames(1000)
 
 
-print(number_name(100))
+#test
+#n = 242
+#print(len(number_name(n)), number_name(n))
+#print(all_numbernames(n))
+#print(solve_euler_17())

@@ -1,6 +1,6 @@
 from copy import copy
 #inv = {"gold coin": 42, "rope": 1}
-#dragonLoot = ["gold coin", "dagger", "gold coin", "gold coin", "ruby", "dragon's pumpkin"]
+#dragonLoot = ["gold coin", "dagger", "gold coin", "gold coin", "ruby", "dragon's pumpkin", "dragon's pumpkin"]
 
 
 def displayInventory(inventory):
@@ -15,14 +15,14 @@ def displayInventory(inventory):
 def addToInventory(inventory, added_items):
     updated_inventory = copy(inventory)
     for item in added_items:
-        if item in inventory:
-            updated_inventory[item] += 1
-        else:
+        if item not in inventory and item not in updated_inventory:
             updated_inventory.setdefault(item, 1)
+        else:
+            updated_inventory[item] += 1
     return updated_inventory
 
 
-# test
+#test
 #inv = addToInventory(inv, dragonLoot)
 #total = displayInventory(inv)
 #print("Total number of items:", total)

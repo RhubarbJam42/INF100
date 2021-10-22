@@ -14,6 +14,6 @@ while True:
         print('Ha det!')
         break
     elif inStorage.get(title, 0) == 0:
-        print(f'Vi har 0 av "{title}"')
+        print(f'Vi har 0 av "{title}"\n')
     else:
-        print('Vi har', str(inStorage.get(title)), 'av', f'"{title}"')
+        print('Vi har', str(inStorage.get(title)), 'av', f'"{title}"\n')
