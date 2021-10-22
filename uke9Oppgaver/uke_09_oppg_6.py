@@ -15,6 +15,6 @@ while True:
         break
     elif inStorage.get(title, 0) == 0:
         inStorage.setdefault(str(title), 10)
-        print('Vi har', str(inStorage.get(title)), 'av', f'"{title}"')
+        print('Vi har', str(inStorage.get(title)), 'av', f'"{title}"\n')
     else:
-        print('Vi har', str(inStorage.get(title)), 'av', f'"{title}"')
+        print('Vi har', str(inStorage.get(title)), 'av', f'"{title}"\n')

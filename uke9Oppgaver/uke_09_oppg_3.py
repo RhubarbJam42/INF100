@@ -27,6 +27,6 @@ for items in myList:
 
 print('')
 
-print('List indices/values:')
+print('List indices/value:')
 for i, v in enumerate(myList):
     print(i, v)
