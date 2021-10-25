@@ -15,7 +15,7 @@ def displayInventory(inventory):
 def addToInventory(inventory, added_items):
     updated_inventory = copy(inventory)
     for item in added_items:
-        if item not in inventory and item not in updated_inventory:
+        if item not in updated_inventory:
             updated_inventory.setdefault(item, 1)
         else:
             updated_inventory[item] += 1
