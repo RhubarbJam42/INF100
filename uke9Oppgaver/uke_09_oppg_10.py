@@ -55,8 +55,9 @@ def number_name(number):
         if sn[1] == '0':
             name += f'{words.get(int(sn[0]) * 10)}'
         else:
-            name += f'{words.get(int(sn[0]) * 10)}{words.get(int(sn[1]))}'
+            name += f'{words.get(int(sn[0]) * 10)}-{words.get(int(sn[1]))}'
     return name
+
 
 #kopi fordi lazy
 def num_name(number):
@@ -97,7 +98,7 @@ def solve_euler_17():
 
 
 #test
-#n = 242
+#n = 52
 #print(len(number_name(n)), number_name(n))
 #print(all_numbernames(n))
 #print(solve_euler_17())
