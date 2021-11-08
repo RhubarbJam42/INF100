@@ -112,4 +112,4 @@ def receipt(prices_filename, cash_register_filename):
 
     return "\n".join(receipt_lines)
 
-print(receipt('prices.txt', 'cash_register.txt'))
+#print(receipt('prices.txt', 'cash_register.txt'))
